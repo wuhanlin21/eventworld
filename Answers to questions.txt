@@ -1,0 +1,12 @@
+Answers:
+
+Q:Please detail any assumptions you have made.
+1.Assume the world instance, coordinates, events, etc are generated randomly each time, and the closest events query is also called only once each time. I didn't store the world after calling the closest events function, which means you will get different results every time you create the world.
+2.The ticket price range is 0-99.99
+3.The format of the input is always correct. I didn't include format error check regarding input. 
+
+Q:How might you change your program if you needed to support multiple events at the same location?
+A:I used a list of dictionaries to store all events in a specific coordinate. You can add as many events as you want after just deleting the "only one event" check statement in the code
+
+Q:How would you change your program if you were working with a much larger world size?
+A:If you still want to store the world in memory, you can just simply change the size of the world in the main function. If not, I would store the location data, events data, etc in a database, and then call the function to get whatever I want.
